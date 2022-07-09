@@ -41,3 +41,5 @@ Once authenticated to a [**[6]**](https://github.com/fairxio/protocol/tree/main/
 **[5]** https://www.w3.org/TR/did-core/#services
 
 **[6]** https://github.com/fairxio/protocol/tree/main/glossary.md#fairx-protocol-glossary-fairx-domain
+
+**[7]** https://datatracker.ietf.org/doc/html/rfc7515
