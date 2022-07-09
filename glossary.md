@@ -16,3 +16,7 @@ The FairX Protocol Glossary is a central location to understand terms users in t
 ## FairX Domain <a name="fairx-protocol-glossary-fairx-domain"></a>
 
 A FairX Domain is a common name service configuration (such as [DNS](https://datatracker.ietf.org/doc/html/rfc1034) (default), but could be [ENS](https://eips.ethereum.org/EIPS/eip-137) or similar).
+
+## FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>
+
+A FairX Node is an electronic service which responds to messages sent to it, or retrieved from it, according to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), alongside with FairX's extensions by way of its [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
