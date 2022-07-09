@@ -17,6 +17,9 @@ The FairX DID Authentication Specification conforms to the requirements specifie
 
 # Overview <a name="fairx-did-authentication-overview"></a>
 
+The FairX Protocol requires authentication whenever there is node-to-node communication.  The protocol relies on the W3C's [Verification Methods](https://www.w3.org/TR/did-core/#verification-methods) and [Verification Relationships](https://www.w3.org/TR/did-core/#verification-relationships) embedded in a DID Document after resolution in order to express the cryptographic material and methods required to authenticate the DID Subject as specified by their DID.
+
+Once authenticated to a [**[6]**](https://github.com/fairxio/protocol/tree/main/glossary.md#fairx-protocol-glossary-fairx-domain) FairX Domain, 
 
 
 # References <a name="fairx-did-authentication-references"></a>
@@ -32,3 +35,5 @@ The FairX DID Authentication Specification conforms to the requirements specifie
 **[4]** https://www.w3.org/TR/did-core/#verification-relationships
 
 **[5]** https://www.w3.org/TR/did-core/#services
+
+**[6]** https://github.com/fairxio/protocol/tree/main/glossary.md#fairx-protocol-glossary-fairx-domain
