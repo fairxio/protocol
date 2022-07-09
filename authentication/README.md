@@ -7,6 +7,7 @@ FairX DID Authentication Specification
 - [Table of Contents](#table-of-contents)
 - [Overview <a name="fairx-did-authentication-overview"></a>](#overview-)
 - [Protocol](#protocol)
+  - [Initial DID Presentation](#initial-did-presentation)
 - [References <a name="fairx-did-authentication-references"></a>](#references-)
 
 FairX is an experimental suite of open source services that run alongside [TBD's Self-Sovereign SDK and Services](https://github.com/TBD54566975). 
@@ -25,6 +26,15 @@ Once authenticated to a [**[6]**](https://github.com/fairxio/protocol/tree/main/
 # Protocol
 
 ![FairX Protocol - Authentication](https://github.com/fairxio/protocol/raw/main/authentication/fairx-protocol-authentication.png "FairX Protocol - Authentication")
+
+## Initial DID Presentation
+
+The DID Subject must first present its DID to the FairX Node authentication service.  This is done according to the [FairX Protocol Open API Authentication Specification]()'s `/auth` endpoint.
+
+The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Document **must** include the following properties, according to the [DID Core Specification](https://www.w3.org/TR/did-core/):
+
+- A `verificationMethod` property with at least 1 [verification method](https://www.w3.org/TR/did-core/#dfn-verification-method) defined for use in authentication
+- A specific [Verification Relationship](https://www.w3.org/TR/did-core/#dfn-verification-relationship) that expresses the relationship between a DID Subject and a Verification Method
 
 # References <a name="fairx-did-authentication-references"></a>
 

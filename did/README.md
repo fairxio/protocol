@@ -61,37 +61,37 @@ did:fairx:zDXjqxEXcqSNsRfc7PdHDw4:zF6ZVrPmpyDt8s4paK2tJaQhivnLTjsr9fS7KGiN8hC8Eh
 # DID Document <a name="document"></a>
 
 ## Example <a name="example2"></a>
-```
+```json
 {
 	"@context": "https://w3id.org/did/v1",
 	"id": "did:fairx:zDXjqxEXcqSNsRfc7PdHDw4",
 	"created": "2022-07-01T12:00:00Z",
 	"updated": "2022-07-03T12:00:00Z",
-	"publicKey": [{
-		"id": "#FairXSigningKey1",
-		"type": "Secp256k1VerificationKey2018",
-		"publicKeyHash": "3934e3eb037ab1630a195eec0d0eda2570cf6388fea385361598e12b904588f3"
+	"controller":"did:fairx:zDXjqxEXcqSNsRfc7PdHDw4",
+	"verificationMethod": [{
+		"id": "did:fairx:zDXjqxEXcqSNsRfc7PdHDw4#AuthenticationKey",
+		"type": "Ed25519VerificationKey2020",
+		"publicKeyMultibase": "zH3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
 	    },
 	    {
-		"id": "#VerififcationKey1",
-		"type": "Secp256k1VerificationKey2018",
-		"publicKeyHash": "3934e3eb037ab1630a195eec0d0eda2570cf6388fea385361598e12b904588f3"
+		"id": "did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK",
 	    }
 	],
 	"authentication": [{
-		"id": "#Service1Key1",
-		"type": "Secp256k1VerificationKey2018",
-		"publicKeyHex": "034f355bdcb7cc0af728ef3cc...59ab0f0b704075871aa"
+		"id": "did:fairx:zDXjqxEXcqSNsRfc7PdHDw4#AuthenticationKey"
+		},
+		{
+		"id":"did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK"
 	    }
 	],
 	"service": [{
 		"id": "#FairXAuthenticationService",
-		"type": "FairX Protocol Authentication Service",
+		"type": "FairXProtocolAuthenticationService",
 		"serviceEndpoint": "https://authentication.fairx.io/v1.0.0"
 	    },
 		{
 		"id": "#FairXSessionService",
-		"type": "FairX Protocol Session Service",
+		"type": "FairXProtocolSessionService",
 		"serviceEndpoint": "https://session.fairx.io/v1.0.0"
 	    }
 	]
@@ -117,6 +117,10 @@ The definition of the `fairx` JSON-LD context is:
 Note: Other type of keys, such as `executor`, `resolver`, and `dataprovider` of a DID Document may be supported in future versions of this specification.
 
 # CRUD Operation Definitions <a name="crud"></a>
+
+## Authentication
+
+Authentication to a [FairX Node]() is a precondition before any other operations can be completed.  Most FairX Nodes utilize [Open Registration](https://github.com/fairxio/protocol/blob/main/glossary.md#fairx-protocol-glossary-regauth-open) and Authentication, but some may utilize a [Private Registration](https://github.com/fairxio/protocol/blob/main/glossary.md#fairx-protocol-glossary-regauth-closed) scheme depending on the node.
 
 ## Create (Register) <a name="create"></a>
 
@@ -152,10 +156,16 @@ PUT /v1/did/did%3Afairx%3AzDXjqxEXcqSNsRfc7PdHDw4%3AzF6ZVrPmpyDt8s4paK2tJaQhivnL
 ```
 ## Delete (Revoke) <a name="delete"></a>
 
-The DID Document may be deleting by invoking the FairX Domain Endpoint, using Authentication Credentials specified in your FairX DID Document:
+The DID Document may be deleted by invoking the FairX Domain Endpoint, using Authentication Credentials specified in your FairX DID Document:
 ```
 DELETE /v1/did/did%3Afairx%3AzDXjqxEXcqSNsRfc7PdHDw4%3AzF6ZVrPmpyDt8s4paK2tJaQhivnLTjsr9fS7KGiN8hC8Eh HTTP/...`
 ```
+
+# Services
+
+The DID document may express certain `services` which conform to standard [**[7]**](https://github.com/fairxio/protocol/blob/main/glossary.md#fairx-protocol-glossary-fairx-services) FairX Services definitions as per the FairX Protocol.
+
+
 
 # Security Considerations <a name="security"></a>
 
@@ -181,4 +191,6 @@ When an entity creates and registers its own `fairx` DID in the FairX domain nod
 **[5]** https://www.w3.org/TR/did-core/#authentication
 
 **[6]** https://www.w3.org/TR/did-core/#capability-delegation
+
+**[7]** https://github.com/fairxio/protocol/blob/main/glossary.md#fairx-protocol-glossary-fairx-services
  

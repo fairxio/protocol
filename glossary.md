@@ -14,6 +14,13 @@ The FairX Protocol Glossary is a central location to understand terms users in t
 - [Concepts <a name="fairx-protocol-glossary-concepts"></a>](#concepts-)
   - [FairX Domain <a name="fairx-protocol-glossary-fairx-domain"></a>](#fairx-domain-)
   - [FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>](#fairx-node-)
+  - [FairX Service <a name="fairx-protocol-glossary-fairx-service"></a>](#fairx-service-)
+- [FairX Services <a name="fairx-protocol-glossary-fairx-services"></a>](#fairx-services-)
+  - [FairX Authentication Service <a name="fairx-protocol-glossary-fairx-authentication-service"></a>](#fairx-authentication-service-)
+  - [FairX Session Service <a name="fairx-protocol-glossary-fairx-session-service"></a>](#fairx-session-service-)
+- [Registration & Authentication <a name="fairx-protocol-glossary-regauth"></a>](#registration--authentication-)
+  - [Open Registration <a name="fairx-protocol-glossary-regauth-open"></a>](#open-registration-)
+  - [Closed Registration <a name="fairx-protocol-glossary-regauth-closed"></a>](#closed-registration-)
 
 # Concepts <a name="fairx-protocol-glossary-concepts"></a>
 
@@ -24,3 +31,44 @@ A FairX Domain is a common name service configuration (such as [DNS](https://dat
 ## FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>
 
 A FairX Node is an electronic service which responds to messages sent to it, or retrieved from it, according to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), alongside with FairX's extensions by way of its [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
+
+## FairX Service <a name="fairx-protocol-glossary-fairx-service"></a>
+
+A FairX Service is an endpoint on a FairX Node, or an entire Node, which serves a specific purpose for the FairX Protocol. 
+
+
+# FairX Services <a name="fairx-protocol-glossary-fairx-services"></a>
+
+## FairX Authentication Service <a name="fairx-protocol-glossary-fairx-authentication-service"></a>
+
+The `type` must be `FairXProtocolAuthenticationService`, and the `serviceEndpoint` **must** conform to the [FairX Protocol - Authentication Specification](https://github.com/fairxio/protocol/tree/main/authentication/fairx-protocol-authentication.png).
+
+```json
+{
+		"id": "#FairXAuthenticationService",
+		"type": "FairXProtocolAuthenticationService",
+		"serviceEndpoint": "https://authentication.fairx.io/v1.0.0"
+}
+```
+
+## FairX Session Service <a name="fairx-protocol-glossary-fairx-session-service"></a>
+
+The `type` must be `FairXProtocolSessionService`, and the `serviceEndpoint` **must** conform to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), and must support all of the [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
+
+```json
+{
+		"id": "#FairXSessionService",
+		"type": "FairXProtocolSessionService",
+		"serviceEndpoint": "https://session.fairx.io/v1.0.0"
+}
+```
+
+# Registration & Authentication <a name="fairx-protocol-glossary-regauth"></a>
+
+## Open Registration <a name="fairx-protocol-glossary-regauth-open"></a>
+
+A method of registration where a FairX Node may allow registration of a DID Subject openly without intervention.  Note, a DID Subject may be Blacklisted.
+
+## Closed Registration <a name="fairx-protocol-glossary-regauth-closed"></a>
+
+A method of registration where a FairX Node only allows authentication to previously registered DID Subjects per private means.  For example, a FairX Protocol Subnetwork can be created where participating nodes are on each other's Whitelists.
