@@ -35,6 +35,7 @@ The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Docume
 
 - A `verificationMethod` property with at least 1 [verification method](https://www.w3.org/TR/did-core/#dfn-verification-method) defined for use in authentication
 - A specific [Verification Relationship](https://www.w3.org/TR/did-core/#dfn-verification-relationship) that expresses the relationship between a DID Subject and a Verification Method
+- A `service` property with at least 1 [service]() defined with a 
 
 # References <a name="fairx-did-authentication-references"></a>
 
