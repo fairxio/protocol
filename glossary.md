@@ -14,7 +14,9 @@ The FairX Protocol Glossary is a central location to understand terms users in t
 - [Concepts <a name="fairx-protocol-glossary-concepts"></a>](#concepts-)
   - [FairX Domain <a name="fairx-protocol-glossary-fairx-domain"></a>](#fairx-domain-)
   - [FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>](#fairx-node-)
+  - [FairX Participant <a name="fairx-protocol-glossary-fairx-participant"></a>](#fairx-participant-)
   - [FairX Service <a name="fairx-protocol-glossary-fairx-service"></a>](#fairx-service-)
+  - [FairX Session <a name="fairx-protocol-glossary-fairx-session"></a>](#fairx-session-)
 - [FairX Services <a name="fairx-protocol-glossary-fairx-services"></a>](#fairx-services-)
   - [FairX Authentication Service <a name="fairx-protocol-glossary-fairx-authentication-service"></a>](#fairx-authentication-service-)
   - [FairX Session Service <a name="fairx-protocol-glossary-fairx-session-service"></a>](#fairx-session-service-)
@@ -32,9 +34,22 @@ A FairX Domain is a common name service configuration (such as [DNS](https://dat
 
 A FairX Node is an electronic service which responds to messages sent to it, or retrieved from it, according to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), alongside with FairX's extensions by way of its [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
 
+## FairX Participant <a name="fairx-protocol-glossary-fairx-participant"></a>
+
+A FairX Participant is a [DID Subject](https://www.w3.org/TR/did-core/#did-subject) that is participating in a FairX Session with 1 or more other Participants.
+
 ## FairX Service <a name="fairx-protocol-glossary-fairx-service"></a>
 
 A FairX Service is an endpoint on a FairX Node, or an entire Node, which serves a specific purpose for the FairX Protocol. 
+
+## FairX Session <a name="fairx-protocol-glossary-fairx-session"></a>
+
+A FairX Session defines a list of Participants (expressed by their DID URLs), a list of Session Executables and their IPFS URLs, metadata, and other configuration.  A Session object must be signed by each of the Participants in order to be considered a valid Active Session.
+
+Sessions may have the following states, depending on its stage in the messaging flow:
+
+- **Proposed** (Sessions have been posted to at least 1 participant node, but not enough signatures have been obtained)
+- **Active** (Sessions have been posted to all participant nodes, and all signatures have been obtained)
 
 
 # FairX Services <a name="fairx-protocol-glossary-fairx-services"></a>
