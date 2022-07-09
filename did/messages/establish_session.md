@@ -8,4 +8,4 @@ The `EstablishSession` message defines all of the properties required in a messa
 
 # Protocol Description
 
-The `EstablishSession` message is embedded within a `CollectionsWrite` [DecentralizedWebNode Interface Message](https://identity.foundation/decentralized-web-node/spec/#write) with a specific [Session]() schema.  
+The `EstablishSession` message is embedded within a `CollectionsWrite` [DecentralizedWebNode Interface Message](https://identity.foundation/decentralized-web-node/spec/#write) with a specific [Session](https://github.com/fairxio/protocol/blob/main/did/messages/session-schema.json) schema.  

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "https://fairx.io/schemas/v1.0.0/messages/session.json",
+    "$id": "https://github.com/fairxio/protocol/blob/main/did/messages/session-schema.json",
     "type": "object",
     "default": {},
     "title": "FairX Protocol Session Schema",
