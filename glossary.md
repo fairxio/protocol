@@ -9,9 +9,13 @@ WASM packages and verify their authenticity.  DIDs and the TBD infrastructure pr
 The FairX Protocol Glossary is a central location to understand terms users in the various FairX Protocol and Sub-Protocol specifications.  All other specifications should link back to this Glossary to help the reader navigate the terminology.
 
 # Table of Contents
+- [FairX Protocol Glossary](#fairx-protocol-glossary)
+- [Table of Contents](#table-of-contents)
+- [Concepts <a name="fairx-protocol-glossary-concepts"></a>](#concepts-)
+  - [FairX Domain <a name="fairx-protocol-glossary-fairx-domain"></a>](#fairx-domain-)
+  - [FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>](#fairx-node-)
 
-
-# Concepts
+# Concepts <a name="fairx-protocol-glossary-concepts"></a>
 
 ## FairX Domain <a name="fairx-protocol-glossary-fairx-domain"></a>
 

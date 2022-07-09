@@ -68,27 +68,32 @@ did:fairx:zDXjqxEXcqSNsRfc7PdHDw4:zF6ZVrPmpyDt8s4paK2tJaQhivnLTjsr9fS7KGiN8hC8Eh
 	"created": "2022-07-01T12:00:00Z",
 	"updated": "2022-07-03T12:00:00Z",
 	"publicKey": [{
-		"id": "#FairXSigningKey#1",
+		"id": "#FairXSigningKey1",
 		"type": "Secp256k1VerificationKey2018",
 		"publicKeyHash": "3934e3eb037ab1630a195eec0d0eda2570cf6388fea385361598e12b904588f3"
-	       },
-	       {
-		"id": "#VerififcationKey#1",
+	    },
+	    {
+		"id": "#VerififcationKey1",
 		"type": "Secp256k1VerificationKey2018",
 		"publicKeyHash": "3934e3eb037ab1630a195eec0d0eda2570cf6388fea385361598e12b904588f3"
-	       }
+	    }
 	],
 	"authentication": [{
-		"id": "#Service1Key#1",
+		"id": "#Service1Key1",
 		"type": "Secp256k1VerificationKey2018",
 		"publicKeyHex": "034f355bdcb7cc0af728ef3cc...59ab0f0b704075871aa"
-	       }
+	    }
 	],
 	"service": [{
-		"id": "#FairXSessionService-#1",
+		"id": "#FairXAuthenticationService",
+		"type": "FairX Protocol Authentication Service",
+		"serviceEndpoint": "https://authentication.fairx.io/v1.0.0"
+	    },
+		{
+		"id": "#FairXSessionService",
 		"type": "FairX Protocol Session Service",
-		"serviceEndpoint": "https://session.fairx.io"
-	       }
+		"serviceEndpoint": "https://session.fairx.io/v1.0.0"
+	    }
 	]
 }
 ```
