@@ -44,7 +44,7 @@ The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Docume
     "id":"#DecentralizedWebNode",
     "type": "DecentralizedWebNode",
     "serviceEndpoint": {
-      "nodes": ["https://dwn.fairx.io"]
+      "nodes": ["https://dwn.fairx.io/v1.0.0"]
     }
   }]
 }

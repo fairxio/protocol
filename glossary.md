@@ -60,9 +60,11 @@ The `type` must be `FairXProtocolAuthenticationService`, and the `serviceEndpoin
 
 ```json
 {
-		"id": "#FairXAuthenticationService",
-		"type": "FairXProtocolAuthenticationService",
-		"serviceEndpoint": "https://authentication.fairx.io/v1.0.0"
+    "id": "#FairXAuthenticationService",
+    "type": "FairXProtocolAuthenticationService",
+    "serviceEndpoint": {
+      "nodes": ["https://authentication.fairx.io/v1.0.0"]
+    }
 }
 ```
 
