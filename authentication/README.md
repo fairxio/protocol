@@ -29,7 +29,7 @@ Once authenticated to a [**[6]**](https://github.com/fairxio/protocol/tree/main/
 
 ## Initial DID Presentation
 
-The DID Subject must first present its DID to the FairX Node authentication service.  This is done according to the [FairX Protocol Open API Authentication Specification]()'s `/auth` endpoint.
+The DID Subject must first present its DID to the FairX Node authentication service.  This is done according to the [FairX Protocol Open API Authentication Specification](https://github.com/fairxio/protocol/blob/main/authentication/authentication-openapi.json)'s `/auth` endpoint.
 
 The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Document **must** include the following properties, according to the [DID Core Specification](https://www.w3.org/TR/did-core/):
 
