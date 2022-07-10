@@ -32,6 +32,8 @@ A FairX Domain is a common name service configuration (such as [DNS](https://dat
 
 ## FairX Node <a name="fairx-protocol-glossary-fairx-node"></a>
 
+![FairX Node](fairx_node.png "FairX Node")
+
 A FairX Node is an electronic service which responds to messages sent to it, or retrieved from it, according to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), alongside with FairX's extensions by way of its [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
 
 ## FairX Participant <a name="fairx-protocol-glossary-fairx-participant"></a>
