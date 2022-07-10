@@ -18,13 +18,13 @@ FairX DID Method Specification
 7. [Privacy](#privacy)
 8. [References](#references)
 
-FairX is an experimental suite of open source services that run alongside [TBD's Self-Sovereign SDK and Services](https://github.com/TBD54566975). 
+The [FairX Protocol](https://github.com/fairxio/protocol) is an experimental suite of open source protocols and services that run alongside [TBD's Self-Sovereign SDK and Services](https://github.com/TBD54566975). 
 
 FairX Decentralized Identifiers is a distributed identifier (DID) designed to provide a way for FairX Protocol Compliant Nodes to identify and verify participants on its network, as well as provide an 
 identity framework for the FairX Protocol "sessions". The role of a FairX DID is to provide a service that supports authentication, personal information verification, the ability to identify FairX Protocol
 WASM packages and verify their authenticity.  DIDs and the TBD infrastructure provide the backbone for the FairX Protocol.  
 
-The FairX DID method specification conforms to the requirements specified in
+The FairX Protocol DID method specification conforms to the requirements specified in
 the DID specification [**[1]**](https://www.w3.org/TR/did-core/), currently published by the
 W3C Credentials Community Group. For more information about DIDs and DID method specifications,
 please see the DID Primer [**[2]**](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md)
