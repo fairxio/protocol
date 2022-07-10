@@ -19,7 +19,7 @@ The FairX Protocol Glossary is a central location to understand terms users in t
   - [FairX Session <a name="fairx-protocol-glossary-fairx-session"></a>](#fairx-session-)
 - [FairX Services <a name="fairx-protocol-glossary-fairx-services"></a>](#fairx-services-)
   - [FairX Authentication Service <a name="fairx-protocol-glossary-fairx-authentication-service"></a>](#fairx-authentication-service-)
-  - [FairX Session Service <a name="fairx-protocol-glossary-fairx-session-service"></a>](#fairx-session-service-)
+  - [FairX Decentralized Web Node (DWN) <a name="fairx-protocol-glossary-fairx-dwn"></a>](#fairx-decentralized-web-node-dwn-)
 - [Registration & Authentication <a name="fairx-protocol-glossary-regauth"></a>](#registration--authentication-)
   - [Open Registration <a name="fairx-protocol-glossary-regauth-open"></a>](#open-registration-)
   - [Closed Registration <a name="fairx-protocol-glossary-regauth-closed"></a>](#closed-registration-)
@@ -66,15 +66,17 @@ The `type` must be `FairXProtocolAuthenticationService`, and the `serviceEndpoin
 }
 ```
 
-## FairX Session Service <a name="fairx-protocol-glossary-fairx-session-service"></a>
+## FairX Decentralized Web Node (DWN) <a name="fairx-protocol-glossary-fairx-dwn"></a>
 
-The `type` must be `FairXProtocolSessionService`, and the `serviceEndpoint` **must** conform to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), and must support all of the [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages).
+The `type` must be `DecentralizedWebNode`, and the `serviceEndpoint` **must** conform to the W3C's [Decentralized Web Node Specification](https://identity.foundation/decentralized-web-node/spec/), and must support all of the [FairX Decentralized Web Node Messages](https://github.com/fairxio/protocol/tree/main/did/messages). Be sure to follow the [DWN Service Endpoint](https://identity.foundation/decentralized-web-node/spec/#service-endpoints) section for details.
 
 ```json
 {
-		"id": "#FairXSessionService",
-		"type": "FairXProtocolSessionService",
-		"serviceEndpoint": "https://session.fairx.io/v1.0.0"
+    "id": "#DecentralizedWebNode",
+    "type": "DecentralizedWebNode", 
+    "serviceEndpoint": {
+      "nodes": ["https://dwn.fairx.io/v1.0.0"]
+    }
 }
 ```
 

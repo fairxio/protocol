@@ -35,7 +35,31 @@ The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Docume
 
 - A `verificationMethod` property with at least 1 [verification method](https://www.w3.org/TR/did-core/#dfn-verification-method) defined for use in authentication
 - A specific [Verification Relationship](https://www.w3.org/TR/did-core/#dfn-verification-relationship) that expresses the relationship between a DID Subject and a Verification Method
-- A `service` property with at least 1 [service]() defined with a 
+- A `service` property with at least 1 [**[8]**](https://identity.foundation/decentralized-web-node/spec/#service-endpoints) Service defined with a `type` of `DecentralizedWebNode`, such as:
+
+```json
+{
+  "id": "did:fairx:zkljids989s0dfs0d9f89dsd",
+  "service": [{
+    "id":"#DecentralizedWebNode",
+    "type": "DecentralizedWebNode",
+    "serviceEndpoint": {
+      "nodes": ["https://dwn.fairx.io"]
+    }
+  }]
+}
+```
+- A `service` property with at least 1 Service defined with a type of FairXAuthenticationService, such as:
+
+```json
+{
+    "id": "#FairXAuthenticationService",
+    "type": "FairXProtocolAuthenticationService",
+    "serviceEndpoint": {
+      "nodes": ["https://authentication.fairx.io/v1.0.0"]
+    }
+}
+```
 
 # References <a name="fairx-did-authentication-references"></a>
 
@@ -54,3 +78,5 @@ The [DID Subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)'s DID Docume
 **[6]** https://github.com/fairxio/protocol/tree/main/glossary.md#fairx-protocol-glossary-fairx-domain
 
 **[7]** https://datatracker.ietf.org/doc/html/rfc7515
+
+**[8]** https://identity.foundation/decentralized-web-node/spec/#service-endpoints
